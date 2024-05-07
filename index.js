@@ -1,30 +1,17 @@
-// code your solution here
 
-function saturdayFun(activity){
-    // This functio returns a string with the activity that is passed into the function
+function saturdayFun(activity = "roller-skate") {
     
-    if (typeof activity != "undefined"){
-        return `This Saturday, I want to ${activity}!`;
-    } else {
-        return `This Saturday, I want to roller-skate!`;
-    }
+    return `This Saturday, I want to ${activity}!`;
 }
 
-const mondayWork = function(activity){
-    if (typeof activity != "undefined"){
-        return `This Monday, I will ${activity}.`;
-    } else {
-        return `This Monday, I will go to the office.`;
-    }
+const mondayWork = function(activity = "go to the office") {
+    
+    return `This Monday, I will ${activity}.`;
 }
 
-function wrapAdjective(special){
+function wrapAdjective(special = '*') {
+
      return function(flair){
-        if (typeof special != "undefined"){
-            return `You are ${special}${flair}${special}!`;
-        } else {
-            special = "*";
-            return `You are ${special}${flair}${special}!`;
-        }
+        return `You are ${special}${flair}${special}!`;
     }
 }
